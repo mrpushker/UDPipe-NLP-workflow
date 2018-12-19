@@ -46,16 +46,28 @@ ui <-shinyUI(
         tabsetPanel(type = "tabs",
                     
                     tabPanel("Overview",
-                             h4(p("Data input")),
-                             p("This app supports Text files (.txt) with UTF-8 encoding ",align="justify"),
-                             br(),
-                             h4('How to use this App'),
+                             
+                             h3('How to use this App'),
                              p('To use this app, click on', 
                                span(strong("Upload data (Text file)")),
                                'and upload the txt data file.',br(), 'Then click on  ', 
                                span(strong('Upload udipipe Model')),'and upload a trained udpipe model of a language.',
                                br(), 
-                               'You can also choose different parts of speech for co-occurrences plot and word cloud map ')),
+                               'You can also choose different parts of speech for co-occurrences plot and word cloud map '),
+                             
+                             h3(p("Data input")),
+                             p("This app supports Text files (.txt) with UTF-8 encoding ",align="justify"),
+                             br(),
+                             h3(p("Sample Data Sources")),
+                             h4(p(a(href="https://github.com/mrpushker/UDPipe-NLP-workflow/blob/master/English.txt",
+                                    "You can see the Story of Aryabhatta"))),
+                             br(),
+                             h4(p(a(href="https://github.com/mrpushker/UDPipe-NLP-workflow/blob/master/Hindi.txt",
+                                    "And also  the History of Nalanda in Hindi"))),
+                             br(),
+                             h4(p(a(href="https://github.com/mrpushker/UDPipe-NLP-workflow/blob/master/Spanish.txt",
+                                    "Too much history!! checkout the Children stories in Spanish")))
+                             ),
                     tabPanel("CO-occurrences Plot", 
                              plotOutput('plot1')),
                     
