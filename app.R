@@ -147,8 +147,8 @@ server <- shinyServer(function(input, output) {
 # Plot the Co occurence plot    
     suppressWarnings(ggraph(wordnetwork, layout = "fr") +  
                        
-                       geom_edge_link(aes(width = cooc, edge_alpha = cooc), edge_colour = "pink") +  
-                       geom_node_text(aes(label = name), col = "darkblue", size = 6) +
+                       geom_edge_link(aes(width = cooc, edge_alpha = cooc), edge_colour = "orange") +  
+                       geom_node_text(aes(label = name), col = "darkgreen", size = 6) +
                        
                        theme_graph(base_family = "Arial Unicode MS") +  
                        theme(legend.position = "none") +
